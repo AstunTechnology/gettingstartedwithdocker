@@ -1,0 +1,14 @@
+{
+    "plugins": ["hints","theme-api","quizzes"],
+    "pluginsConfig": {
+        "theme-api": {
+            "theme": "dark"
+        },
+        "hints": {
+            "info": "fa fa-info-circle",
+            "tip": "fa fa-mortar-board",
+            "danger": "fa fa-exclamation",
+            "working": "fa fa-wrench"
+        }
+    }
+}

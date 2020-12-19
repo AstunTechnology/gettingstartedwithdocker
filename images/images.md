@@ -12,24 +12,29 @@ A Dockerfile is a step by step set of ordered instructions for building an image
 
 Dockerfiles are human-readable text files, with a very specific syntax, are generally named `Dockerfile`. 
 
-*Note that the name is case-sensitive.*
+{% hint style='info' %}Note that the name 'Dockerfile' is case-sensitive.{% endhint %}
 
-A very basic Dockerfile might be:
+{% method %}
+A very basic `Dockerfile` might be:
 
-	FROM ubuntu:18.04
-	COPY . /app
-	RUN make /app
-	CMD python /app/app.py
+{% common %}
+```yaml
+FROM ubuntu:18.04
+COPY . /app
+RUN make /app
+CMD python /app/app.py
+```
+{% endmethod %}
 
 * **FROM**: the base image and version tag as found on Docker Hub
 * **COPY**: transfer some files from the host computer
 * **RUN**: build your application with `make`
 * **CMD**: specify the command to run within the container
 
-The difference between `RUN` and `CMD` is that `RUN` makes a change to the image and commits the results as a new layer. `CMD` is the command that the container should actually run when it's deployed. Note that `CMD` can be overridden when deploying the container (more later).
+{% hint style='tip' %}The difference between `RUN` and `CMD` is that `RUN` makes a change to the image and commits the results as a new layer. `CMD` is the command that the container should actually run when it's deployed. Note that `CMD` can be overridden when deploying the container (more later).{% endhint%}
 
 ## docker-entrypoint.sh
 
-`docker-entrypoint.sh` is an additional script referenced by the `ENTRYPOINT` declaration in a Dockerfile, which can be ran as a starter script, preparing the container before executing the command referenced in `CMD`. Since it cannot be overridden when deploying the container, like `CMD` can, it can be used to run stable commands that the end-user should not be able to adjust.
+`docker-entrypoint.sh` is an additional script referenced by the `ENTRYPOINT` declaration in a `Dockerfile`, which can be ran as a starter script, preparing the container before executing the command referenced in `CMD`. Since it cannot be overridden when deploying the container, like `CMD` can, it can be used to run stable commands that the end-user should not be able to adjust.
 
 An example of this would be a postgreSQL image that requires the database to be initiated before first use. In that case `docker-entrypoint.sh` would contain the init script, then `CMD` would actually run the postgreSQL executable.
