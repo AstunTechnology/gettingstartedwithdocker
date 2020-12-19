@@ -6,6 +6,8 @@ This is a quick non-exhaustive guide to the basics of using docker for the purpo
 
 It probably shouldn't be used for navigational purposes.
 
+You can view this guide online at https://astuntechnology.github.io/gettingstartedwithdocker/_docs/
+
 ![I don't know what I'm doing](./pics/baileydog.jpg)
 
 *http://instagram.com/goldenretrieverbailey*
