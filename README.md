@@ -11,3 +11,5 @@ You can view this guide online at https://astuntechnology.github.io/gettingstart
 ![I don't know what I'm doing](./pics/baileydog.jpg)
 
 *http://instagram.com/goldenretrieverbailey*
+
+(Build me from the gh-pages branch with `gitbook build . _docs`)
