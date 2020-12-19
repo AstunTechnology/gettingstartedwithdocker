@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Geonode · GitBook</title>
+        <title>Software and Terminology · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -69,8 +69,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="terminology.html" />
     
-    <link rel="prev" href="hackstuff.md#setting-up-git" />
+    
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -114,9 +116,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="../intro/">
+        <li class="chapter " data-level="1.2" data-path="./">
             
-                <a href="../intro/">
+                <a href="./">
             
                     
                     What is Docker
@@ -127,9 +129,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../intro/terminology.html">
+        <li class="chapter active" data-level="1.3" data-path="terminology.html">
             
-                <a href="../intro/terminology.html">
+                <a href="terminology.html">
             
                     
                     Software and Terminology
@@ -141,9 +143,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../intro/terminology.html">
+        <li class="chapter " data-level="1.3.1" data-path="terminology.html">
             
-                <a href="../intro/terminology.html#software-you-need">
+                <a href="terminology.html#software-you-need">
             
                     
                     Software you need
@@ -154,9 +156,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="../intro/terminology.html">
+        <li class="chapter " data-level="1.3.2" data-path="terminology.html">
             
-                <a href="../intro/terminology.html#jargon-you-need-to-know">
+                <a href="terminology.html#jargon-you-need-to-know">
             
                     
                     Jargon you need to know
@@ -404,9 +406,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9" data-path="hackstuff.html">
+        <li class="chapter " data-level="1.9" data-path="../astunhackspecifics/hackstuff.html">
             
-                <a href="hackstuff.html">
+                <a href="../astunhackspecifics/hackstuff.html">
             
                     
                     Astun Hack Specifics
@@ -418,9 +420,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.9.1" data-path="hackstuff.html">
+        <li class="chapter " data-level="1.9.1" data-path="../astunhackspecifics/hackstuff.html">
             
-                <a href="hackstuff.html#connecting-to-your-server">
+                <a href="../astunhackspecifics/hackstuff.html#connecting-to-your-server">
             
                     
                     Connecting to your server
@@ -431,9 +433,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.2" data-path="hackstuff.html">
+        <li class="chapter " data-level="1.9.2" data-path="../astunhackspecifics/hackstuff.html">
             
-                <a href="hackstuff.html#getting-a-bitbucket-app-password">
+                <a href="../astunhackspecifics/hackstuff.html#getting-a-bitbucket-app-password">
             
                     
                     Getting a BitBucket App Password
@@ -444,9 +446,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.3" data-path="hackstuff.html">
+        <li class="chapter " data-level="1.9.3" data-path="../astunhackspecifics/hackstuff.html">
             
-                <a href="hackstuff.html#setting-up-git">
+                <a href="../astunhackspecifics/hackstuff.html#setting-up-git">
             
                     
                     Setting up Git
@@ -457,7 +459,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.4" data-path="hackstuff.md#setting-up-git">
+        <li class="chapter " data-level="1.9.4" data-path="../astunhackspecifics/hackstuff.md#setting-up-git">
             
                 <span>
             
@@ -470,9 +472,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.9.5" data-path="geonode.html">
+        <li class="chapter " data-level="1.9.5" data-path="../astunhackspecifics/geonode.html">
             
-                <a href="geonode.html">
+                <a href="../astunhackspecifics/geonode.html">
             
                     
                     Geonode
@@ -518,7 +520,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Geonode</a>
+        <a href=".." >Software and Terminology</a>
     </h1>
 </div>
 
@@ -533,63 +535,52 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="geonode-on-docker">Geonode on Docker</h1>
-<p>While the Geonode project is split into multiple repositories, we are going with this one: <a href="https://github.com/GeoNode/geonode" target="_blank">https://github.com/GeoNode/geonode</a>. </p>
-<p>There are also multiple ways of running the software, depending on use-cases. We are using the <a href="https://docs.geonode.org/en/3.x/install/advanced/spc/index.html" target="_blank">SPCGeoNode</a> version.</p>
-<p>Geonode has the following components:</p>
+                                <h1 id="software-and-terminology">Software and Terminology</h1>
+<h3 id="software-you-need">Software you need</h3>
+<p>There are lots of products related to Docker but the only ones you need for getting started are</p>
+<ul>
+<li><p><strong>Docker Engine</strong>, which you can download from <a href="https://www.docker.com/products/container-runtime" target="_blank">https://www.docker.com/products/container-runtime</a>.</p>
+</li>
+<li><p><strong>Docker-Compose</strong> is also useful for easy deployment of multiple containers at once. You can get it from <a href="https://docs.docker.com/compose/install/" target="_blank">https://docs.docker.com/compose/install/</a>.</p>
+</li>
+</ul>
+<h3 id="jargon-you-need-to-know">Jargon you need to know</h3>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Description</th>
-<th>Website</th>
+<th style="text-align:left">Term</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Django (containing geonode)</td>
-<td>Content Management System based on python</td>
-<td><a href="https://docs.djangoproject.com/en/3.1/" target="_blank">https://docs.djangoproject.com/en/3.1/</a></td>
+<td style="text-align:left">Images</td>
+<td style="text-align:left">All docker containers start with a base <strong>image</strong>. These are the smallest possible package of code and dependencies that you can start to build your code on. You can either build your own image or download a pre-built one from container registries such as Docker Hub.</td>
 </tr>
 <tr>
-<td>Nginx</td>
-<td>Web server</td>
-<td></td>
+<td style="text-align:left">Dockerfiles</td>
+<td style="text-align:left"><strong>Dockerfiles</strong> are the way in which you set out the instructions for building a new image, either from scratch, or more likely based on an existing image.</td>
 </tr>
 <tr>
-<td>Geoserver</td>
-<td></td>
-<td></td>
+<td style="text-align:left">Docker Hub</td>
+<td style="text-align:left"><a href="https://hub.docker.com/repositories" target="_blank">Docker Hub</a> is a container registry, or an online repository of container images that you can upload your image to, or download other images for use in your own applications. Often images on Docker Hub are tagged with a version, so for instance you can download an image for PostgreSQL 9.5 or one for PostgreSQL 12 (and so on) <div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>Docker Hub uses the same push/pull terminology that version control repositories such as GitHub use.</p>
+</div></div></td>
 </tr>
 <tr>
-<td>Postgresql/Postgis</td>
-<td></td>
-<td></td>
+<td style="text-align:left">Containers</td>
+<td style="text-align:left"><strong>Containers</strong> are a set of running processes that sit on top of a private isolated filesystem provided by an image. <div class="alert alert-danger hints-alert"><div class="hints-icon"><i class="fa fa-exclamation"></i></div><div class="hints-container"><p>It&apos;s important to note that any changes made during run-time on top of the image are ephemeral, so if you stop the container from running they will disappear. This includes all application data.</p>
+</div></div></td>
 </tr>
 <tr>
-<td>Celery</td>
-<td>Task processor</td>
-<td><a href="https://docs.celeryproject.org/en/master/index.html" target="_blank">https://docs.celeryproject.org/en/master/index.html</a></td>
+<td style="text-align:left">Storage</td>
+<td style="text-align:left">Storage that persists beyond the restart of a container is provided by <strong>Volumes</strong> and <strong>Bind Mounts</strong>. They are generally stored on the host computer. More on these later!</td>
 </tr>
 <tr>
-<td>RabbitMQ</td>
-<td>Message broker</td>
-<td><a href="https://www.rabbitmq.com/documentation.html" target="_blank">https://www.rabbitmq.com/documentation.html</a></td>
-</tr>
-<tr>
-<td>LetsEncrypt</td>
-<td>Gets SSL Certificates</td>
+<td style="text-align:left">Host</td>
+<td style="text-align:left">The computer (could be your laptop), server or instance that the containers are running on</td>
 </tr>
 </tbody>
 </table>
-<div class="api-method"><div class="api-method-definition"><p>Geonde is running from the <code>/home/astun/geonode/scripts/spcgeonode</code> directory.</p>
-<p>The containers are started using the following command from the <code>spcgeonode</code> folder:</p>
-</div><div class="api-method-code"><div class="api-method-example"><pre><code class="lang-bash">$ docker-compose <span class="hljs-_">-f</span> docker-compose.yml <span class="hljs-_">-f</span> docker-compose.overrides.yml up <span class="hljs-_">-d</span>
-</code></pre>
-</div></div></div>
-
-<p>Environment variables are set in multiple places, including the <code>.env</code> file and <code>docker-compose.yml</code>.</p>
-<p>Note that several of the commands in <code>docker-compose.yml</code> refer up the folder hierarchy to resources in the root <code>geonode</code> folder.</p>
 
                                 
                                 </section>
@@ -623,7 +614,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Geonode","level":"1.9.5","depth":2,"previous":{"title":"Making changes during the hack","level":"1.9.4","depth":2,"anchor":"#making-changes-during-the-hack","path":"astunhackspecifics/hackstuff.md#setting-up-git","ref":"./astunhackspecifics/hackstuff.md#setting-up-git#making-changes-during-the-hack","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","theme-api","quizzes","livereload"],"pluginsConfig":{"livereload":{},"search":{},"hints":{"danger":"fa fa-exclamation","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"quizzes":{},"highlight":{},"theme-api":{"languages":[],"split":true,"theme":"dark"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"astunhackspecifics/geonode.md","mtime":"2020-12-19T18:36:17.833Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-19T17:37:03.334Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Software and Terminology","level":"1.3","depth":1,"next":{"title":"Software you need","level":"1.3.1","depth":2,"anchor":"#software-you-need","path":"intro/terminology.md","ref":"./intro/terminology.md#software-you-need","articles":[]},"previous":{"title":"What is Docker","level":"1.2","depth":1,"path":"intro/README.md","ref":"./intro/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","theme-api","quizzes"],"pluginsConfig":{"search":{},"hints":{"danger":"fa fa-exclamation","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"quizzes":{},"highlight":{},"theme-api":{"languages":[],"split":true,"theme":"dark"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"intro/terminology.md","mtime":"2020-12-19T18:10:14.567Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-19T19:05:15.765Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -634,10 +625,6 @@
     
         
         <script src="../gitbook/gitbook-plugin-quizzes/quizzes.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
