@@ -1,0 +1,670 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Astun Hack Specifics · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-quizzes/quizzes.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="hackstuff.html" />
+    
+    
+    <link rel="prev" href="../deployment/usefulcommands.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">A hacky dev-ish guide to getting started with Docker</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../intro/">
+            
+                <a href="../intro/">
+            
+                    
+                    What is Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../intro/terminology.html">
+            
+                <a href="../intro/terminology.html">
+            
+                    
+                    Software and Terminology
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../intro/terminology.html">
+            
+                <a href="../intro/terminology.html#software-you-need">
+            
+                    
+                    Software you need
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../intro/terminology.html">
+            
+                <a href="../intro/terminology.html#jargon-you-need-to-know">
+            
+                    
+                    Jargon you need to know
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../images/images.html">
+            
+                <a href="../images/images.html">
+            
+                    
+                    Images in more detail
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../images/images.html">
+            
+                <a href="../images/images.html#base-images">
+            
+                    
+                    Base Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../images/images.html">
+            
+                <a href="../images/images.html#dockerfiles">
+            
+                    
+                    Dockerfiles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../images/images.html">
+            
+                <a href="../images/images.html#docker-entrypoint.sh">
+            
+                    
+                    Docker-EntryPoint
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../images/storage.html">
+            
+                <a href="../images/storage.html">
+            
+                    
+                    Storage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../images/storage.html">
+            
+                <a href="../images/storage.html#volumes">
+            
+                    
+                    Volumes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../images/storage.html">
+            
+                <a href="../images/storage.html#bind-mounts">
+            
+                    
+                    Bind Mounts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../images/networking.html">
+            
+                <a href="../images/networking.html">
+            
+                    
+                    Networking in Containers
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../images/networking.html">
+            
+                <a href="../images/networking.html#bridge-networks">
+            
+                    
+                    Bridge Networks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../images/networking.md#bridge-networks">
+            
+                <span>
+            
+                    
+                    Host Networks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../images/networking.md#bridge-networks">
+            
+                <span>
+            
+                    
+                    Exposing Ports
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../deployment/deployingwithdocker.html">
+            
+                <a href="../deployment/deployingwithdocker.html">
+            
+                    
+                    Deploying with Docker
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../deployment/deployingwithdocker.html">
+            
+                <a href="../deployment/deployingwithdocker.html#single-containers">
+            
+                    
+                    Single Containers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../deployment/deployingwithdocker.html">
+            
+                <a href="../deployment/deployingwithdocker.html#multiple-linked-containers">
+            
+                    
+                    Multiple containers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../deployment/deployingwithdocker.html">
+            
+                <a href="../deployment/deployingwithdocker.html#making-changes-stopping-and-starting">
+            
+                    
+                    Stopping, starting, and making changes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../deployment/usefulcommands.html">
+            
+                <a href="../deployment/usefulcommands.html">
+            
+                    
+                    Useful Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="hackstuff.html">
+            
+                <a href="hackstuff.html">
+            
+                    
+                    Astun Hack Specifics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="hackstuff.html">
+            
+                <a href="hackstuff.html#connecting-to-your-server">
+            
+                    
+                    Connecting to your server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="hackstuff.html">
+            
+                <a href="hackstuff.html#getting-a-bitbucket-app-password">
+            
+                    
+                    Getting a BitBucket App Password
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="hackstuff.html">
+            
+                <a href="hackstuff.html#setting-up-git">
+            
+                    
+                    Setting up Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="hackstuff.md#setting-up-git">
+            
+                <span>
+            
+                    
+                    Making changes during the hack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="geonode.html">
+            
+                <a href="geonode.html">
+            
+                    
+                    Geonode
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Astun Hack Specifics</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="specifics-for-the-astun-hack">Specifics for the Astun Hack</h1>
+<h3 id="connecting-to-your-server">Connecting to your server</h3>
+<blockquote>
+<p>GeoNode is big. You won&apos;t believe how vastly, hugely, mind-bogglingly big it is...</p>
+</blockquote>
+<p>...consequently the hack will run on a set of identical AWS EC2 instances, so you can&apos;t break anyone else&apos;s work.</p>
+<div class="api-method"><div class="api-method-definition"><p>First ensure you can ssh onto your instance. You will need the following:</p>
+<ul>
+<li>The number of the instance (eg geonode03)</li>
+<li>The sandpit-shared.euwest2.pem file (from Marco)</li>
+<li>A terminal in which you can ssh onto a server on the Astun vpn (this can be via PuTTY in windows)</li>
+</ul>
+<p>The basic syntax for connecting is (substituting in your instance number for 0X and the location where you&apos;ve saved the pem file):</p>
+</div><div class="api-method-code"><div class="api-method-example"><pre><code class="lang-bash">$ ssh astun@geonode0X.sandpit.astun.co.uk -i ~/.ssh/sandpit-shared.euwest2.pem
+</code></pre>
+</div></div></div>
+
+<h3 id="getting-a-bitbucket-app-password">Getting a BitBucket App Password</h3>
+<p>You&apos;ll also need a bitbucket app password for authentication.</p>
+<ul>
+<li>Go to <a href="https://bitbucket.org/account/settings/app-passwords/" target="_blank">https://bitbucket.org/account/settings/app-passwords/</a> and choose <strong>create app password</strong></li>
+<li>Give it a unique name (eg docker-geonode) and choose <strong>read</strong>, <strong>write</strong> and <strong>admin</strong> access for <strong>Repositories</strong>, and <strong>read</strong> and <strong>write</strong> access for <strong>Pull Requests</strong> and <strong>Issues</strong></li>
+<li>Click <strong>create</strong> and then copy the supplied password to a text file or similar.</li>
+</ul>
+<p><div class="alert alert-danger hints-alert"><div class="hints-icon"><i class="fa fa-exclamation"></i></div><div class="hints-container"><p>Make sure you save the provided password somewhere safe because you will need it every time you commit to the repository and you won&apos;t be able to retrieve it from BitBucket.</p>
+</div></div></p>
+<h3 id="setting-up-git">Setting up Git</h3>
+<div class="api-method"><div class="api-method-definition"><p>To set this up, once you have ssh&apos;d into your instance, at the command prompt run the following commands:</p>
+</div><div class="api-method-code"><div class="api-method-example"><pre><code class="lang-bash">$ <span class="hljs-built_in">cd</span> astun-geonode-customisations
+$ rm -rf *
+$ git init .
+$ git remote add https://yourbitbucketusername.bitbucket.org/astuntech/docker-geonode.git
+</code></pre>
+</div></div></div>
+
+<p>When asked for the password, use your BitBucket app password</p>
+<div class="api-method"><div class="api-method-definition"><p>Then configure git to use your username and email in commits:</p>
+</div><div class="api-method-code"><div class="api-method-example"><pre><code class="lang-bash">$ git config user.name <span class="hljs-string">&quot;yourbitbucketusername&quot;</span>
+$ git config user.email <span class="hljs-string">&quot;your work email&quot;</span>
+</code></pre>
+</div></div></div>
+
+<div class="api-method"><div class="api-method-definition"><p>Then create a new branch for your work, with a sensible name such as hack-geonode0X where X is your geonode instance number and set the same branch name on the upstream remote (it will ask you for your app password again):</p>
+</div><div class="api-method-code"><div class="api-method-example"><pre><code class="lang-bash">$ git checkout -b hack-geonode0X
+$ git push --set-upstream origin hack-geonode0X
+</code></pre>
+</div></div></div>
+
+
+<h3 id="making-changes-during-the-hack">Making changes during the hack</h3>
+<p>Any changes that you make <strong>at all</strong> should be copied into <code>astun-geonode-customisations</code>, respecting the <code>geonode</code> folder hierarchy and committed to the repository on your branch. </p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Astun Hack Specifics","level":"1.9","depth":1,"next":{"title":"Connecting to your server","level":"1.9.1","depth":2,"anchor":"#connecting-to-your-server","path":"astunhackspecifics/hackstuff.md","ref":"./astunhackspecifics/hackstuff.md#connecting-to-your-server","articles":[]},"previous":{"title":"Useful Commands","level":"1.8","depth":1,"path":"deployment/usefulcommands.md","ref":"./deployment/usefulcommands.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","theme-api","quizzes","livereload"],"pluginsConfig":{"livereload":{},"search":{},"hints":{"danger":"fa fa-exclamation","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"quizzes":{},"highlight":{},"theme-api":{"languages":[],"split":true,"theme":"dark"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"astunhackspecifics/hackstuff.md","mtime":"2020-12-19T18:24:47.784Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-19T17:37:03.334Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-quizzes/quizzes.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+

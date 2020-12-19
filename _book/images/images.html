@@ -1,0 +1,647 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Images in more detail · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-quizzes/quizzes.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="images.html" />
+    
+    
+    <link rel="prev" href="../intro/terminology.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">A hacky dev-ish guide to getting started with Docker</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../intro/">
+            
+                <a href="../intro/">
+            
+                    
+                    What is Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../intro/terminology.html">
+            
+                <a href="../intro/terminology.html">
+            
+                    
+                    Software and Terminology
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../intro/terminology.html">
+            
+                <a href="../intro/terminology.html#software-you-need">
+            
+                    
+                    Software you need
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../intro/terminology.html">
+            
+                <a href="../intro/terminology.html#jargon-you-need-to-know">
+            
+                    
+                    Jargon you need to know
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="images.html">
+            
+                <a href="images.html">
+            
+                    
+                    Images in more detail
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="images.html">
+            
+                <a href="images.html#base-images">
+            
+                    
+                    Base Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="images.html">
+            
+                <a href="images.html#dockerfiles">
+            
+                    
+                    Dockerfiles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="images.html">
+            
+                <a href="images.html#docker-entrypoint.sh">
+            
+                    
+                    Docker-EntryPoint
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="storage.html">
+            
+                <a href="storage.html">
+            
+                    
+                    Storage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="storage.html">
+            
+                <a href="storage.html#volumes">
+            
+                    
+                    Volumes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="storage.html">
+            
+                <a href="storage.html#bind-mounts">
+            
+                    
+                    Bind Mounts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="networking.html">
+            
+                <a href="networking.html">
+            
+                    
+                    Networking in Containers
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="networking.html">
+            
+                <a href="networking.html#bridge-networks">
+            
+                    
+                    Bridge Networks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="networking.md#bridge-networks">
+            
+                <span>
+            
+                    
+                    Host Networks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="networking.md#bridge-networks">
+            
+                <span>
+            
+                    
+                    Exposing Ports
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../deployment/deployingwithdocker.html">
+            
+                <a href="../deployment/deployingwithdocker.html">
+            
+                    
+                    Deploying with Docker
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../deployment/deployingwithdocker.html">
+            
+                <a href="../deployment/deployingwithdocker.html#single-containers">
+            
+                    
+                    Single Containers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../deployment/deployingwithdocker.html">
+            
+                <a href="../deployment/deployingwithdocker.html#multiple-linked-containers">
+            
+                    
+                    Multiple containers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../deployment/deployingwithdocker.html">
+            
+                <a href="../deployment/deployingwithdocker.html#making-changes-stopping-and-starting">
+            
+                    
+                    Stopping, starting, and making changes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../deployment/usefulcommands.html">
+            
+                <a href="../deployment/usefulcommands.html">
+            
+                    
+                    Useful Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../astunhackspecifics/hackstuff.html">
+            
+                <a href="../astunhackspecifics/hackstuff.html">
+            
+                    
+                    Astun Hack Specifics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../astunhackspecifics/hackstuff.html">
+            
+                <a href="../astunhackspecifics/hackstuff.html#connecting-to-your-server">
+            
+                    
+                    Connecting to your server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../astunhackspecifics/hackstuff.html">
+            
+                <a href="../astunhackspecifics/hackstuff.html#getting-a-bitbucket-app-password">
+            
+                    
+                    Getting a BitBucket App Password
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../astunhackspecifics/hackstuff.html">
+            
+                <a href="../astunhackspecifics/hackstuff.html#setting-up-git">
+            
+                    
+                    Setting up Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../astunhackspecifics/hackstuff.md#setting-up-git">
+            
+                <span>
+            
+                    
+                    Making changes during the hack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../astunhackspecifics/geonode.html">
+            
+                <a href="../astunhackspecifics/geonode.html">
+            
+                    
+                    Geonode
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Images in more detail</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="images-in-more-detail">Images in more detail</h1>
+<h2 id="base-images">Base Images</h2>
+<p>While it&apos;s possible to build an image entirely from scratch, life is way too short. The recommended approach is to pull a suitable base image from a container registry such as docker hub. Generally you should choose the smallest possible image that fulfils your basic requirements, as this will be faster to download and faster to load into memory when starting the container.</p>
+<p>Note that there aren&apos;t just images for operating systems like Ubuntu. There are specific images for things like openjdk8 or Python 3.6. A good generic starting image is alpine, which is a very lightweight linux distribution with an image size of 5 whole megabytes.</p>
+<h2 id="dockerfiles">Dockerfiles</h2>
+<p>A Dockerfile is a step by step set of ordered instructions for building an image. Each instruction creates a Layer in the final image by outlining the changes needed on top of the layer defined in the previous instruction. </p>
+<p>Dockerfiles are human-readable text files, with a very specific syntax, are generally named <code>Dockerfile</code>. </p>
+<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>Note that the name &apos;Dockerfile&apos; is case-sensitive.</p>
+</div></div></p>
+<div class="api-method"><div class="api-method-definition"><p>A very basic <code>Dockerfile</code> might be:</p>
+</div><div class="api-method-code"><div class="api-method-example"><pre><code class="lang-yaml">FROM ubuntu:<span class="hljs-number">18.04</span>
+COPY . /app
+RUN make /app
+CMD python /app/app.py
+</code></pre>
+</div></div></div>
+
+<ul>
+<li><strong>FROM</strong>: the base image and version tag as found on Docker Hub</li>
+<li><strong>COPY</strong>: transfer some files from the host computer</li>
+<li><strong>RUN</strong>: build your application with <code>make</code></li>
+<li><strong>CMD</strong>: specify the command to run within the container</li>
+</ul>
+<p><div class="alert alert-success hints-alert"><div class="hints-icon"><i class="fa fa-mortar-board"></i></div><div class="hints-container"><p>The difference between <code>RUN</code> and <code>CMD</code> is that <code>RUN</code> makes a change to the image and commits the results as a new layer. <code>CMD</code> is the command that the container should actually run when it&apos;s deployed. Note that <code>CMD</code> can be overridden when deploying the container (more later).</p>
+</div></div></p>
+<h2 id="docker-entrypointsh">docker-entrypoint.sh</h2>
+<p><code>docker-entrypoint.sh</code> is an additional script referenced by the <code>ENTRYPOINT</code> declaration in a <code>Dockerfile</code>, which can be ran as a starter script, preparing the container before executing the command referenced in <code>CMD</code>. Since it cannot be overridden when deploying the container, like <code>CMD</code> can, it can be used to run stable commands that the end-user should not be able to adjust.</p>
+<p>An example of this would be a postgreSQL image that requires the database to be initiated before first use. In that case <code>docker-entrypoint.sh</code> would contain the init script, then <code>CMD</code> would actually run the postgreSQL executable.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Images in more detail","level":"1.4","depth":1,"next":{"title":"Base Images","level":"1.4.1","depth":2,"anchor":"#base-images","path":"images/images.md","ref":"./images/images.md#base-images","articles":[]},"previous":{"title":"Jargon you need to know","level":"1.3.2","depth":2,"anchor":"#jargon-you-need-to-know","path":"intro/terminology.md","ref":"./intro/terminology.md#jargon-you-need-to-know","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","theme-api","quizzes","livereload"],"pluginsConfig":{"livereload":{},"search":{},"hints":{"danger":"fa fa-exclamation","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"quizzes":{},"highlight":{},"theme-api":{"languages":[],"split":true,"theme":"dark"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"images/images.md","mtime":"2020-12-19T18:37:11.706Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-19T17:37:03.334Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-quizzes/quizzes.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+

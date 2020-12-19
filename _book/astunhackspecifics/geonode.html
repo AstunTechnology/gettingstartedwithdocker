@@ -1,0 +1,674 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Geonode · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-quizzes/quizzes.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="hackstuff.md#setting-up-git" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">A hacky dev-ish guide to getting started with Docker</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../intro/">
+            
+                <a href="../intro/">
+            
+                    
+                    What is Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../intro/terminology.html">
+            
+                <a href="../intro/terminology.html">
+            
+                    
+                    Software and Terminology
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../intro/terminology.html">
+            
+                <a href="../intro/terminology.html#software-you-need">
+            
+                    
+                    Software you need
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../intro/terminology.html">
+            
+                <a href="../intro/terminology.html#jargon-you-need-to-know">
+            
+                    
+                    Jargon you need to know
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../images/images.html">
+            
+                <a href="../images/images.html">
+            
+                    
+                    Images in more detail
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../images/images.html">
+            
+                <a href="../images/images.html#base-images">
+            
+                    
+                    Base Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../images/images.html">
+            
+                <a href="../images/images.html#dockerfiles">
+            
+                    
+                    Dockerfiles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../images/images.html">
+            
+                <a href="../images/images.html#docker-entrypoint.sh">
+            
+                    
+                    Docker-EntryPoint
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../images/storage.html">
+            
+                <a href="../images/storage.html">
+            
+                    
+                    Storage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../images/storage.html">
+            
+                <a href="../images/storage.html#volumes">
+            
+                    
+                    Volumes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../images/storage.html">
+            
+                <a href="../images/storage.html#bind-mounts">
+            
+                    
+                    Bind Mounts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../images/networking.html">
+            
+                <a href="../images/networking.html">
+            
+                    
+                    Networking in Containers
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../images/networking.html">
+            
+                <a href="../images/networking.html#bridge-networks">
+            
+                    
+                    Bridge Networks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../images/networking.md#bridge-networks">
+            
+                <span>
+            
+                    
+                    Host Networks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../images/networking.md#bridge-networks">
+            
+                <span>
+            
+                    
+                    Exposing Ports
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../deployment/deployingwithdocker.html">
+            
+                <a href="../deployment/deployingwithdocker.html">
+            
+                    
+                    Deploying with Docker
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../deployment/deployingwithdocker.html">
+            
+                <a href="../deployment/deployingwithdocker.html#single-containers">
+            
+                    
+                    Single Containers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../deployment/deployingwithdocker.html">
+            
+                <a href="../deployment/deployingwithdocker.html#multiple-linked-containers">
+            
+                    
+                    Multiple containers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../deployment/deployingwithdocker.html">
+            
+                <a href="../deployment/deployingwithdocker.html#making-changes-stopping-and-starting">
+            
+                    
+                    Stopping, starting, and making changes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../deployment/usefulcommands.html">
+            
+                <a href="../deployment/usefulcommands.html">
+            
+                    
+                    Useful Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="hackstuff.html">
+            
+                <a href="hackstuff.html">
+            
+                    
+                    Astun Hack Specifics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="hackstuff.html">
+            
+                <a href="hackstuff.html#connecting-to-your-server">
+            
+                    
+                    Connecting to your server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="hackstuff.html">
+            
+                <a href="hackstuff.html#getting-a-bitbucket-app-password">
+            
+                    
+                    Getting a BitBucket App Password
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="hackstuff.html">
+            
+                <a href="hackstuff.html#setting-up-git">
+            
+                    
+                    Setting up Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="hackstuff.md#setting-up-git">
+            
+                <span>
+            
+                    
+                    Making changes during the hack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.5" data-path="geonode.html">
+            
+                <a href="geonode.html">
+            
+                    
+                    Geonode
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Geonode</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="geonode-on-docker">Geonode on Docker</h1>
+<p>While the Geonode project is split into multiple repositories, we are going with this one: <a href="https://github.com/GeoNode/geonode" target="_blank">https://github.com/GeoNode/geonode</a>. </p>
+<p>There are also multiple ways of running the software, depending on use-cases. We are using the <a href="https://docs.geonode.org/en/3.x/install/advanced/spc/index.html" target="_blank">SPCGeoNode</a> version.</p>
+<p>Geonode has the following components:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Website</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Django (containing geonode)</td>
+<td>Content Management System based on python</td>
+<td><a href="https://docs.djangoproject.com/en/3.1/" target="_blank">https://docs.djangoproject.com/en/3.1/</a></td>
+</tr>
+<tr>
+<td>Nginx</td>
+<td>Web server</td>
+<td></td>
+</tr>
+<tr>
+<td>Geoserver</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Postgresql/Postgis</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Celery</td>
+<td>Task processor</td>
+<td><a href="https://docs.celeryproject.org/en/master/index.html" target="_blank">https://docs.celeryproject.org/en/master/index.html</a></td>
+</tr>
+<tr>
+<td>RabbitMQ</td>
+<td>Message broker</td>
+<td><a href="https://www.rabbitmq.com/documentation.html" target="_blank">https://www.rabbitmq.com/documentation.html</a></td>
+</tr>
+<tr>
+<td>LetsEncrypt</td>
+<td>Gets SSL Certificates</td>
+</tr>
+</tbody>
+</table>
+<div class="api-method"><div class="api-method-definition"><p>Geonde is running from the <code>/home/astun/geonode/scripts/spcgeonode</code> directory.</p>
+<p>The containers are started using the following command from the <code>spcgeonode</code> folder:</p>
+</div><div class="api-method-code"><div class="api-method-example"><pre><code class="lang-bash">$ docker-compose <span class="hljs-_">-f</span> docker-compose.yml <span class="hljs-_">-f</span> docker-compose.overrides.yml up <span class="hljs-_">-d</span>
+</code></pre>
+</div></div></div>
+
+<p>Environment variables are set in multiple places, including the <code>.env</code> file and <code>docker-compose.yml</code>.</p>
+<p>Note that several of the commands in <code>docker-compose.yml</code> refer up the folder hierarchy to resources in the root <code>geonode</code> folder.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Geonode","level":"1.9.5","depth":2,"previous":{"title":"Making changes during the hack","level":"1.9.4","depth":2,"anchor":"#making-changes-during-the-hack","path":"astunhackspecifics/hackstuff.md#setting-up-git","ref":"./astunhackspecifics/hackstuff.md#setting-up-git#making-changes-during-the-hack","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","theme-api","quizzes","livereload"],"pluginsConfig":{"livereload":{},"search":{},"hints":{"danger":"fa fa-exclamation","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"quizzes":{},"highlight":{},"theme-api":{"languages":[],"split":true,"theme":"dark"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"astunhackspecifics/geonode.md","mtime":"2020-12-19T18:36:17.833Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-19T17:37:03.334Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-quizzes/quizzes.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+
