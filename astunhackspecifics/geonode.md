@@ -1,4 +1,6 @@
-# Geonode on Docker
+# Geonode
+
+![Geonode logo](../pics/geonode-logo.png)
 
 While the Geonode project is split into multiple repositories, we are going with this one: https://github.com/GeoNode/geonode. 
 
