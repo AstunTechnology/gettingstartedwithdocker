@@ -1,5 +1,5 @@
 
-<img align="right" width="200" height="43" src="../pics/AstunSmall.png">
+<img align="right" width="200" height="43" src="../gettingstartwithdocker/pics/AstunSmall.png">
 
 # A hacky dev-ish guide to getting started with Docker
 
