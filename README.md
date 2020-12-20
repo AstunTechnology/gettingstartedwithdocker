@@ -1,7 +1,8 @@
 
-<img align="right" width="200" height="43" src="../gettingstartwithdocker/pics/AstunSmall.png">
 
 # A hacky dev-ish guide to getting started with Docker
+
+![Astun logo](../pics/AstunSmall.png)
 
 This is a quick non-exhaustive guide to the basics of using docker for the purposes of an Astun Technology hack in December 2020. 
 
