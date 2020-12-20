@@ -11,3 +11,6 @@ It probably shouldn't be used for navigational purposes.
 ![I don't know what I'm doing](./pics/baileydog.jpg)
 
 *http://instagram.com/goldenretrieverbailey*
+
+GitHub Repository: https://github.com/AstunTechnology/gettingstartedwithdocker
+GitHub Pages Version: https://astuntechnology.github.io/gettingstartedwithdocker/
