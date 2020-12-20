@@ -1,6 +1,7 @@
-# Introduction
 
-### A hacky dev-ish guide to getting started with Docker
+<img align="right" width="200" height="43" src="../pics/AstunSmall.png">
+
+# A hacky dev-ish guide to getting started with Docker
 
 This is a quick non-exhaustive guide to the basics of using docker for the purposes of an Astun Technology hack in December 2020. 
 

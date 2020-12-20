@@ -1,6 +1,8 @@
 # What is Docker and what is it not
 
-Docker (other containerisation tools are available) is a technology for delivering applications. It is not a virtualisation technology. While both containers and VMs are ways of delivering an isolated environment in which to run an application, the way they approach this is fundamentally different.
+![Docker logo](../pics/docker-logo.png)
+
+Docker (other containerisation tools are available) is a technology for delivering applications. It is not a virtualisation technology. While both containers and virtual machines (VMs) are ways of delivering an isolated environment in which to run an application, the way they approach this is fundamentally different.
 
 One analogy is that virtual machines are like houses, whereas docker containers are like apartments. Houses (VMs) are fully self-contained, with everything they need to be lived in, such as plumbing, heating, electricity, a bedroom, bathroom etc. Apartments might have bedrooms and bathrooms, but they have shared infrastructure, which is administered within the wider apartment block, and you rent the size of apartment that you need, be that a penthouse or a studio flat.
 
