@@ -1,5 +1,5 @@
 {
-    "plugins": ["hints","theme-api","quizzes"],
+    "plugins": ["hints","theme-api"],
     "pluginsConfig": {
         "theme-api": {
             "theme": "dark"
@@ -10,5 +10,12 @@
             "danger": "fa fa-exclamation",
             "working": "fa fa-wrench"
         }
-    }
+    },
+    "links": {
+            "sharing": {
+                "all": false,
+                "twitter": false,
+                "facebook": false
+            }
+        }
 }
