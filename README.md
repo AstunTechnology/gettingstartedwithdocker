@@ -13,4 +13,5 @@ It probably shouldn't be used for navigational purposes.
 *http://instagram.com/goldenretrieverbailey*
 
 GitHub Repository: https://github.com/AstunTechnology/gettingstartedwithdocker
+
 GitHub Pages Version: https://astuntechnology.github.io/gettingstartedwithdocker/
