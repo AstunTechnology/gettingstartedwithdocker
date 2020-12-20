@@ -28,4 +28,5 @@
 	* [Setting up Git](./astunhackspecifics/hackstuff.md#setting-up-git)
 	* [Making changes during the hack](./astunhackspecifics/hackstuff.md#setting-up-git#making-changes-during-the-hack)
 	* [Geonode](./astunhackspecifics/geonode.md)
+	* [Default settings and credentials](./astunhackspecifics/geonode.md#default-settings-and-credentials)
 
