@@ -43,7 +43,7 @@ To set this up, once you have ssh'd into your instance, at the command prompt ru
 $ cd astun-geonode-customisations
 $ rm -rf *
 $ git init .
-$ git remote add https://yourbitbucketusername.bitbucket.org/astuntech/docker-geonode.git
+$ git remote add origin https://yourbitbucketusername.bitbucket.org/astuntech/docker-geonode.git
 ```
 
 {% endmethod %}
