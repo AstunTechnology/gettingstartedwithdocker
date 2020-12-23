@@ -455,9 +455,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.4" data-path="hackstuff.md#setting-up-git">
+        <li class="chapter " data-level="1.9.4" data-path="hackstuff.html">
             
-                <span>
+                <a href="hackstuff.html#making-changes-during-the-hack">
             
                     
                     Making changes during the hack
@@ -468,7 +468,46 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.5" data-path="geonode.html">
+        <li class="chapter " data-level="1.9.5" data-path="hackstuff.html">
+            
+                <a href="hackstuff.html#changing-docker-configuration">
+            
+                    
+                    Changing Docker configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="hackstuff.html">
+            
+                <a href="hackstuff.html#configuring-geonode">
+            
+                    
+                    Configuring GeoNode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="hackstuff.html">
+            
+                <a href="hackstuff.html#overriding-geonode-django-settings-">
+            
+                    
+                    Overriding GeoNode (Django settings)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="geonode.html">
             
                 <a href="geonode.html">
             
@@ -481,7 +520,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.6" data-path="geonode.html">
+        <li class="chapter " data-level="1.9.9" data-path="geonode.html">
             
                 <a href="geonode.html#default-settings-and-credentials">
             
@@ -595,6 +634,70 @@ $ git push --set-upstream origin hack-geonode0X
 
 <h3 id="making-changes-during-the-hack">Making changes during the hack</h3>
 <p>Any changes that you make <strong>at all</strong> should be copied into <code>astun-geonode-customisations</code>, respecting the <code>geonode</code> folder hierarchy and committed to the repository on your branch. </p>
+<h3 id="changing-docker-configuration">Changing Docker configuration</h3>
+<p>To aid making changes to the <code>docker-compose.yml</code> and associated environment variables passed to the Docker intances via <code>.env</code> it&apos;s useful to symlink these files in the repo at <code>~/astun-geonode-customisations</code> to where they are used <code>~/geonode/scripts/spcgeonode/</code></p>
+<pre><code class="lang-shell">cd ~/geonode/scripts/spcgeonode
+ln ../../../astun-geonode-customisations/scripts/spcgeonode/docker-compose.yml docker-compose.yml
+ln ../../../astun-geonode-customisations/scripts/spcgeonode/.env .env
+</code></pre>
+<p>Now you can edit the <code>docker-compose.yml</code> and <code>.env</code> in the <code>~/astun-geonode-customisations</code> directory and changes will be reflected within the <code>~/geonode</code> tree.</p>
+<h4 id="turn-it-off-and-back-on-again">Turn it off and back on again</h4>
+<p>If you edit <code>docker-compose.yml</code> and <code>.env</code> then to apply changes run the following while logged into the EC2 server:</p>
+<pre><code># Change to the directory containing the docker-compose.yml that
+# defines our containers
+cd ~/geonode/scripts/spcgeonode
+
+# Turn it off (NOTE: Any changes made locally to containers will be lost)
+docker-compose down -d
+
+# Turn it back on again (will create the containers based on
+# `docker-compose.yml` including setting environment variables etc.)
+docker-compose up -d
+
+# Optionally view log output
+docker-compose logs -f
+</code></pre><p>Note: You can run docker-compose in the foreground by omitting the <code>-d</code> option, this can be helpful for debugging as the logs are also sent directly to the console. To stop the instances hit ctrl-d.</p>
+<h3 id="configuring-geonode">Configuring GeoNode</h3>
+<p>The recommended way of configuring the GeoNode instance is via environment variables as per the <a href="https://docs.geonode.org/en/master/basic/settings/" target="_blank">GeoNode settings docs</a>. A large number of settings are configurabe via environment variables but not all; other settings such as the available base maps require defining a Python local settings file as per <a href="#overriding-geonode-django-settings-">Overriding GeoNode (Django settings)</a>.</p>
+<p>To configure GeoNode via an enviroment variable first follow the steps to <a href="#change-docker-configuration">Change Docker configuration</a> to support setting environment variables.</p>
+<p>Environment variables can be set in <code>~/astun-geonode-customisations/scripts/spcgeonode/.env</code>. The <a href="https://docs.geonode.org/en/master/basic/settings/" target="_blank">GeoNode settings docs</a> detail the available settings.</p>
+<p>An example of setting the <code>DISPLAY_SOCIAL</code> environment variable to <code>False</code> to disable the Sharing tab for Layers etc.:</p>
+<ul>
+<li>Edit <code>~/astun-geonode-customisations/scripts/spcgeonode/.env</code> to add the environment variable:<pre><code>  DISPLAY_SOCIAL=False
+</code></pre></li>
+<li>Edit <code>~/astun-geonode-customisations/scripts/spcgeonode/docker-compose.yml</code> to expose the enviroment variable to the containers:<pre><code>  x-common-django:
+    ...
+    environment:
+    ...
+      - DISPLAY_SOCIAL=${DISPLAY_SOCIAL}
+    ...
+</code></pre></li>
+</ul>
+<h3 id="overriding-geonode-django-settings">Overriding GeoNode (Django settings)</h3>
+<p>The <code>DJANGO_SETTINGS_MODULE</code> environment variable allows you to specify a Python module that will be used to configure the GeoNode Django application.</p>
+<p>First create a local setting file while connected to the host EC2 instance (not the container as the files inside <code>~/geonode/geonode</code> on the EC2 instance are available inside the Django container at <code>/spcgeonode/</code>):</p>
+<pre><code class="lang-shell">cd ~/geonode/geonode
+vim local_settings.py
+</code></pre>
+<p>Add the following to <code>local_settings.py</code>:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> geonode.settings <span class="hljs-keyword">import</span> *
+
+// Define the base maps available <span class="hljs-keyword">in</span> the MapStore web map
+MAPSTORE_BASELAYERS = [
+    {
+        <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;tileprovider&quot;</span>,
+        <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;Stamen Watercolor&quot;</span>,
+        <span class="hljs-string">&quot;provider&quot;</span>: <span class="hljs-string">&quot;Stamen.Watercolor&quot;</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Stamen.Watercolor&quot;</span>,
+        <span class="hljs-string">&quot;source&quot;</span>: <span class="hljs-string">&quot;Stamen&quot;</span>,
+        <span class="hljs-string">&quot;group&quot;</span>: <span class="hljs-string">&quot;background&quot;</span>,
+        <span class="hljs-string">&quot;thumbURL&quot;</span>: <span class="hljs-string">&quot;https://stamen-tiles-c.a.ssl.fastly.net/watercolor/0/0/0.jpg&quot;</span>,
+        <span class="hljs-string">&quot;visibility&quot;</span>: <span class="hljs-keyword">True</span>
+    }
+]
+</code></pre>
+<p>Now the local settings file is in place define the <code>DJANGO_SETTINGS_MODULE</code> environment variable follow the steps to <a href="#change-docker-configuration">Change Docker configuration</a> and <a href="#configuring-geonode">Configuring GeoNode</a>. <code>DJANGO_SETTINGS_MODULE</code> should be set to the name of your module; if your local settings are in <code>geonode/local_settings.py</code> then <code>DJANGO_SETTINGS_MODULE</code> should be set to <code>geonode.local_settings</code>.</p>
+<p>Once the <code>DJANGO_SETTINGS_MODULE</code> is defined in <code>.env</code> and <code>docker-compose.yml</code> be sure to <a href="#turn-it-off-and-back-on-again">turn the containers off and back on again :-)</a></p>
 
                                 
                                 </section>
@@ -628,7 +731,7 @@ $ git push --set-upstream origin hack-geonode0X
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Astun Hack Specifics","level":"1.9","depth":1,"next":{"title":"Connecting to your server","level":"1.9.1","depth":2,"anchor":"#connecting-to-your-server","path":"astunhackspecifics/hackstuff.md","ref":"./astunhackspecifics/hackstuff.md#connecting-to-your-server","articles":[]},"previous":{"title":"Useful Commands","level":"1.8","depth":1,"path":"deployment/usefulcommands.md","ref":"./deployment/usefulcommands.md","articles":[]},"dir":"ltr"},"config":{"plugins":["hints","theme-api"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"hints":{"danger":"fa fa-exclamation","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"all":false,"twitter":false,"facebook":false}},"gitbook":"*"},"file":{"path":"astunhackspecifics/hackstuff.md","mtime":"2020-12-21T13:21:23.162Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-21T13:22:05.914Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Astun Hack Specifics","level":"1.9","depth":1,"next":{"title":"Connecting to your server","level":"1.9.1","depth":2,"anchor":"#connecting-to-your-server","path":"astunhackspecifics/hackstuff.md","ref":"./astunhackspecifics/hackstuff.md#connecting-to-your-server","articles":[]},"previous":{"title":"Useful Commands","level":"1.8","depth":1,"path":"deployment/usefulcommands.md","ref":"./deployment/usefulcommands.md","articles":[]},"dir":"ltr"},"config":{"plugins":["hints","theme-api"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"hints":{"danger":"fa fa-exclamation","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"all":false,"twitter":false,"facebook":false}},"gitbook":"*"},"file":{"path":"astunhackspecifics/hackstuff.md","mtime":"2020-12-23T15:45:19.432Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-23T15:46:07.087Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

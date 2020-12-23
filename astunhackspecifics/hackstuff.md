@@ -78,3 +78,91 @@ $ git push --set-upstream origin hack-geonode0X
 Any changes that you make **at all** should be copied into `astun-geonode-customisations`, respecting the `geonode` folder hierarchy and committed to the repository on your branch. 
 
 
+### Changing Docker configuration
+
+To aid making changes to the `docker-compose.yml` and associated environment variables passed to the Docker intances via `.env` it's useful to symlink these files in the repo at `~/astun-geonode-customisations` to where they are used `~/geonode/scripts/spcgeonode/`
+
+```shell
+cd ~/geonode/scripts/spcgeonode
+ln ../../../astun-geonode-customisations/scripts/spcgeonode/docker-compose.yml docker-compose.yml
+ln ../../../astun-geonode-customisations/scripts/spcgeonode/.env .env
+```
+
+Now you can edit the `docker-compose.yml` and `.env` in the `~/astun-geonode-customisations` directory and changes will be reflected within the `~/geonode` tree.
+
+#### Turn it off and back on again
+
+If you edit `docker-compose.yml` and `.env` then to apply changes run the following while logged into the EC2 server:
+
+```
+# Change to the directory containing the docker-compose.yml that
+# defines our containers
+cd ~/geonode/scripts/spcgeonode
+
+# Turn it off (NOTE: Any changes made locally to containers will be lost)
+docker-compose down -d
+
+# Turn it back on again (will create the containers based on
+# `docker-compose.yml` including setting environment variables etc.)
+docker-compose up -d
+
+# Optionally view log output
+docker-compose logs -f
+```
+
+Note: You can run docker-compose in the foreground by omitting the `-d` option, this can be helpful for debugging as the logs are also sent directly to the console. To stop the instances hit ctrl-d.
+
+### Configuring GeoNode
+
+The recommended way of configuring the GeoNode instance is via environment variables as per the [GeoNode settings docs](https://docs.geonode.org/en/master/basic/settings/). A large number of settings are configurabe via environment variables but not all; other settings such as the available base maps require defining a Python local settings file as per [Overriding GeoNode (Django settings)](#overriding-geonode-django-settings-).
+
+To configure GeoNode via an enviroment variable first follow the steps to [Change Docker configuration](#change-docker-configuration) to support setting environment variables.
+
+Environment variables can be set in `~/astun-geonode-customisations/scripts/spcgeonode/.env`. The [GeoNode settings docs](https://docs.geonode.org/en/master/basic/settings/) detail the available settings.
+
+An example of setting the `DISPLAY_SOCIAL` environment variable to `False` to disable the Sharing tab for Layers etc.:
+
+* Edit `~/astun-geonode-customisations/scripts/spcgeonode/.env` to add the environment variable:
+        DISPLAY_SOCIAL=False
+* Edit `~/astun-geonode-customisations/scripts/spcgeonode/docker-compose.yml` to expose the enviroment variable to the containers:
+        x-common-django:
+          ...
+          environment:
+          ...
+            - DISPLAY_SOCIAL=${DISPLAY_SOCIAL}
+          ...
+
+### Overriding GeoNode (Django settings)
+
+The `DJANGO_SETTINGS_MODULE` environment variable allows you to specify a Python module that will be used to configure the GeoNode Django application.
+
+First create a local setting file while connected to the host EC2 instance (not the container as the files inside `~/geonode/geonode` on the EC2 instance are available inside the Django container at `/spcgeonode/`):
+
+```shell
+cd ~/geonode/geonode
+vim local_settings.py
+```
+
+Add the following to `local_settings.py`:
+
+```python
+from geonode.settings import *
+
+// Define the base maps available in the MapStore web map
+MAPSTORE_BASELAYERS = [
+    {
+        "type": "tileprovider",
+        "title": "Stamen Watercolor",
+        "provider": "Stamen.Watercolor",
+        "name": "Stamen.Watercolor",
+        "source": "Stamen",
+        "group": "background",
+        "thumbURL": "https://stamen-tiles-c.a.ssl.fastly.net/watercolor/0/0/0.jpg",
+        "visibility": True
+    }
+]
+```
+
+Now the local settings file is in place define the `DJANGO_SETTINGS_MODULE` environment variable follow the steps to [Change Docker configuration](#change-docker-configuration) and [Configuring GeoNode](#configuring-geonode). `DJANGO_SETTINGS_MODULE` should be set to the name of your module; if your local settings are in `geonode/local_settings.py` then `DJANGO_SETTINGS_MODULE` should be set to `geonode.local_settings`.
+
+Once the `DJANGO_SETTINGS_MODULE` is defined in `.env` and `docker-compose.yml` be sure to [turn the containers off and back on again :-)](#turn-it-off-and-back-on-again)
