@@ -26,7 +26,10 @@
 	* [Connecting to your server](./astunhackspecifics/hackstuff.md#connecting-to-your-server)
 	* [Getting a BitBucket App Password](./astunhackspecifics/hackstuff.md#getting-a-bitbucket-app-password)
 	* [Setting up Git](./astunhackspecifics/hackstuff.md#setting-up-git)
-	* [Making changes during the hack](./astunhackspecifics/hackstuff.md#setting-up-git#making-changes-during-the-hack)
+	* [Making changes during the hack](./astunhackspecifics/hackstuff.md#making-changes-during-the-hack)
+	* [Changing Docker configuration](./astunhackspecifics/hackstuff.md#changing-docker-configuration)
+	* [Configuring GeoNode](./astunhackspecifics/hackstuff.md#configuring-geonode)
+	* [Overriding GeoNode (Django settings)](./astunhackspecifics/hackstuff.md#overriding-geonode-django-settings-)
 	* [Geonode](./astunhackspecifics/geonode.md)
 	* [Default settings and credentials](./astunhackspecifics/geonode.md#default-settings-and-credentials)
 
