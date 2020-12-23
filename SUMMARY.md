@@ -29,7 +29,7 @@
 	* [Making changes during the hack](./astunhackspecifics/hackstuff.md#making-changes-during-the-hack)
 	* [Changing Docker configuration](./astunhackspecifics/hackstuff.md#changing-docker-configuration)
 	* [Configuring GeoNode](./astunhackspecifics/hackstuff.md#configuring-geonode)
-	* [Overriding GeoNode (Django settings)](./astunhackspecifics/hackstuff.md#overriding-geonode-django-settings-)
+	* [Overriding GeoNode (Django settings)](./astunhackspecifics/hackstuff.md#overriding-geonode-django-settings)
 	* [Geonode](./astunhackspecifics/geonode.md)
 	* [Default settings and credentials](./astunhackspecifics/geonode.md#default-settings-and-credentials)
 
